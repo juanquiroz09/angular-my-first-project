@@ -1,17 +1,20 @@
 <div [ngStyle] = "{
-    'background': setting.fondo
+    'background': setting.fondo,
+    'border': '5px solid black',
+    'border-color': setting.color
 }">
     <h2>Bienvenido al {{ title }}</h2>
     <p>{{descripcion}}</p>
     <nav>
-        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
         &nbsp;
-        <a [routerLink]="['/zapatillas']">Zapatillas</a>
+        <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>
         &nbsp;
-        <a [routerLink]="['/cursos']">Cursos</a>
+        <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
         &nbsp;
-        <a [routerLink]="['/videojuego']">Videojuego</a>
+        <a [routerLink]="['/videojuego']" [routerLinkActive]="['active']">Videojuego</a>
     </nav>
+    <hr>
 <!--
     <button (click)="coverVideogames(false)"*ngIf="show_videogames">Ocultar</button>
     <button (click)="coverVideogames(true)"*ngIf="!show_videogames">Mostrar</button>
