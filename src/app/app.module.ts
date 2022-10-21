@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {routing,appRoutingProviders} from './zapatillas/app.routing';
+import {routing,appRoutingProviders} from './app.routing';
 
 import { AppComponent } from './app.component';
 import { VideojuegoComponent } from './video_games/videogame.component';
@@ -10,6 +10,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ExternoComponent } from './externo/externo.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     VideojuegoComponent,
     ZapatillasComponent,
     CursosComponent,
-    HomeComponent
+    HomeComponent,
+    ExternoComponent
   ],
   imports: [
     BrowserModule,
