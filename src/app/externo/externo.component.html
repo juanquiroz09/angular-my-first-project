@@ -3,6 +3,8 @@
 {{fecha| date: 'fullDate'}}
 <br>
 {{'Hola Mundo Con Pipes'| lowercase}}
+<br>
+{{88 | calculadora: 2}}
 <hr>
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()" />
 <div *ngIf="!user">

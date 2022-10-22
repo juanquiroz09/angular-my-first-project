@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ExternoComponent } from './externo/externo.component';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ExternoComponent } from './externo/externo.component';
     ZapatillasComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    CalculadoraPipe
   ],
   imports: [
     BrowserModule,
