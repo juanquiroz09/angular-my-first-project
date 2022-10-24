@@ -8,6 +8,7 @@ import { ContactoUsuario } from '../models/contacto.usuario';
 })
 export class ContactoComponent implements OnInit {
   public usuario: ContactoUsuario;
+  public show_data: any;
 
   constructor() { 
     this.usuario = new ContactoUsuario('','','','')
@@ -16,8 +17,9 @@ export class ContactoComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(formContacto: any){
-    formContacto.reset();
     console.log("enviado");
+    //this.show_data = this.usuario;
+    //form.reset();
     console.log(this.usuario);
 
   }
