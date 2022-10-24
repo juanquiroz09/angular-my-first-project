@@ -12,9 +12,8 @@ export class PeticionesService {
     return this._http.get(this.url + 'api/users/' + userId);
   }
   addUser(user:any): Observable<any>{
-    let json = JSON.stringify(user);
-    let headers = new HttpHeaders(). set("Content-Type","application/json");
-    let params;
-    return this._http.post(this.url+"api/users", params, {headers:headers});
+    let params = JSON.stringify(user);
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.post(this.url+'api/users', params, {headers:headers});
 }
 }
