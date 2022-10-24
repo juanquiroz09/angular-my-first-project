@@ -1,5 +1,5 @@
 <h2>Contacto</h2>
-<form action="" #formContacto="ngForm" (ngSubmit)="onSubmit()">
+<form action="" #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
   <label for="name">Nombre</label>
   <br>
   <input type="text" name="name" #nombre="ngModel" [(ngModel)]="usuario.nombre" required="" pattern="[a-zA-Z]+"/>
@@ -23,5 +23,5 @@
   <textarea name="message" id="" cols="20" rows="5" #message="ngModel" [(ngModel)]="usuario.mensaje" required=""></textarea>
   <span *ngIf="message.touched && !message.valid">Elmensaje es obligatorio</span>
   <br>
-  <input type="submit" value="Enviar">
+  <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
 </form>
